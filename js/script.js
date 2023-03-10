@@ -6,7 +6,7 @@ const stopButton = document.querySelector("#stopButton");
 const title = document.querySelector("#title")
 const body = document.querySelector("body")
 let seconds = 0
-let minutes = 0
+let minutes = 25
 let myInterval = null
 let flag = false
 let count = 0
@@ -15,7 +15,7 @@ function twoDigits(digit) {
     if (digit < 10) {
         digit = "0" + digit;
     }
-    
+
     return digit
 }
 
@@ -48,9 +48,9 @@ function startPomodoro(){
     seconds--
 
     timer.textContent = `${twoDigits(minutes)}:${twoDigits(seconds)}`
-        
+
     myInterval = setTimeout(startPomodoro, 1000)
-    
+
 }
 
 function pausePomodoro() {
