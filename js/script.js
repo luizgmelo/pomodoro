@@ -72,6 +72,11 @@ function stopPomodoro() {
     timer.textContent = `${twoDigits(minutes)}:${twoDigits(seconds)}`
 }
 
+function sound() {
+    let sound = new Audio("./audio/audio.mp3")
+    sound.play()
+}
+
 startButton.addEventListener("click", startPomodoro)
 pauseButton.addEventListener("click", pausePomodoro)
 stopButton.addEventListener("click", stopPomodoro)
